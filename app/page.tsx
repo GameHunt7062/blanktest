@@ -8,11 +8,11 @@ const LOGO = '/BlanK.png'
 const SITE = 'https://blankbot.vercel.app'
 
 export const metadata: Metadata = {
-  title: 'BlanK-AsseT — Discord Bot',
-  description: 'The Discord bot built for serious servers. Powerful moderation, smart automation, and advanced server management — free, always.',
+  title: 'BlanK Bot Discord Bot',
+  description: 'The Bot You Were Dreaming Of. Powerful moderation, smart automation, and advanced server management - free, always.',
   openGraph: {
     title: 'BlanK-AsseT — Discord Bot',
-    description: 'The Discord bot built for serious servers. Powerful moderation, smart automation, and advanced server management — free, always.',
+    description: 'The Bot You Were Dreaming Of. Powerful moderation, smart automation, and advanced server management - free, always.',
     images: [{ url: LOGO, width: 1080, height: 1080 }],
   },
 }
@@ -172,7 +172,7 @@ export default function Home() {
               href="https://discord.com/oauth2/authorize?client_id=1385103762737201153"
               target="_blank" rel="noreferrer"
             >
-              Add BlanK-AsseT Free
+              Add BlanK-Bot
             </a>
             <a
               className={s.btnOutline}
