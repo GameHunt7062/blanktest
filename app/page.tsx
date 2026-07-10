@@ -25,54 +25,56 @@ export default function Home() {
       {/* ── HERO ── */}
       <section className={s.hero}>
         <div className={s.heroBg} aria-hidden />
-        <div className={s.heroBannerWrap}>
-          <img src="/blank-banner.png" alt="BLANK" className={s.heroLogoImg} />
-        </div>
         <div className={s.heroInner}>
-          <h1 className={s.heroTitle}>
-            <span className={s.heroTitleSub}>The Bot I Was Dreaming Of</span>
-          </h1>
-          <div className={s.heroBtns}>
-            <a
-              className={s.btnBlurple}
-              href="https://discord.com/oauth2/authorize?client_id=1385103762737201153"
-              target="_blank" rel="noreferrer"
-            >
-              Add to Server — It&apos;s Free
-            </a>
-            <a
-              className={s.btnGhost}
-              href="https://discord.gg/3MJAYraXu8"
-              target="_blank" rel="noreferrer"
-            >
-              Join Support Server
-            </a>
-          </div>
-        </div>
-        <div className={s.heroVisual} aria-hidden>
-          <div className={s.heroBotCard}>
-            <img src={LOGO} alt="" className={s.heroBotAvatar} />
-            <div className={s.heroBotInfo}>
-              <div className={s.heroBotName}>
-                BlanK-AsseT
-                <span className={s.appBadge}>
-                  <svg viewBox="0 0 16 16" width={11} height={11} fill="none" stroke="#fff" strokeWidth={2.4} strokeLinecap="round" strokeLinejoin="round"><path d="M4 8.5 6.8 11.2 12 5.2"/></svg>
-                  APP
-                </span>
-              </div>
-              <div className={s.heroBotStatus}><span className={s.statusDot} />Online</div>
+          <div className={s.heroLeft}>
+            <div className={s.heroBannerWrap}>
+              <img src="/blank-banner.png" alt="BLANK" className={s.heroLogoImg} />
+            </div>
+            <h1 className={s.heroTitle}>
+              <span className={s.heroTitleSub}>The Bot I Was Dreaming Of</span>
+            </h1>
+            <div className={s.heroBtns}>
+              <a
+                className={s.btnBlurple}
+                href="https://discord.com/oauth2/authorize?client_id=1385103762737201153"
+                target="_blank" rel="noreferrer"
+              >
+                Add to Server — It&apos;s Free
+              </a>
+              <a
+                className={s.btnGhost}
+                href="https://discord.gg/3MJAYraXu8"
+                target="_blank" rel="noreferrer"
+              >
+                Join Support Server
+              </a>
             </div>
           </div>
-          <div className={s.heroMsgGroup}>
-            {DEMO_MSGS.map((m, i) => (
-              <div key={i} className={s.heroMsg} style={{ animationDelay: `${i * 0.15}s` }}>
-                <div className={s.heroMsgBar} style={{ background: m.color }} />
-                <div>
-                  <span className={s.heroMsgCmd}>{m.cmd}</span>
-                  <span className={s.heroMsgText}>{m.text}</span>
+          <div className={s.heroVisual} aria-hidden>
+            <div className={s.heroBotCard}>
+              <img src={LOGO} alt="" className={s.heroBotAvatar} />
+              <div className={s.heroBotInfo}>
+                <div className={s.heroBotName}>
+                  BlanK-AsseT
+                  <span className={s.appBadge}>
+                    <svg viewBox="0 0 16 16" width={11} height={11} fill="none" stroke="#fff" strokeWidth={2.4} strokeLinecap="round" strokeLinejoin="round"><path d="M4 8.5 6.8 11.2 12 5.2"/></svg>
+                    APP
+                  </span>
                 </div>
+                <div className={s.heroBotStatus}><span className={s.statusDot} />Online</div>
               </div>
-            ))}
+            </div>
+            <div className={s.heroMsgGroup}>
+              {DEMO_MSGS.map((m, i) => (
+                <div key={i} className={s.heroMsg} style={{ animationDelay: `${i * 0.15}s` }}>
+                  <div className={s.heroMsgBar} style={{ background: m.color }} />
+                  <div>
+                    <span className={s.heroMsgCmd}>{m.cmd}</span>
+                    <span className={s.heroMsgText}>{m.text}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
