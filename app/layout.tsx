@@ -1,9 +1,8 @@
+import Script from 'next/script'
 import type { Metadata } from 'next'
 import './globals.css'
-
 const LOGO = '/BlanK.png'
 const SITE = 'https://blankbot.vercel.app'
-
 export const metadata: Metadata = {
   title: { default: 'BlanK-AsseT', template: '%s — BlanK-AsseT' },
   description: 'The Discord bot built for serious servers. Powerful moderation, smart automation, and advanced server management — free, always.',
@@ -31,11 +30,24 @@ export const metadata: Metadata = {
     apple: '/BlanK.png',
   },
 }
-
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {children}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-REQZCSSBMB"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-REQZCSSBMB');
+          `}
+        </Script>
+      </body>
     </html>
   )
 }
